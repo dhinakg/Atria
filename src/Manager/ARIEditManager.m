@@ -187,7 +187,7 @@
     }
 
     // Calculate path and set image
-    NSString *path = [NSString stringWithFormat:@"/Library/PreferenceBundles/AtriaPrefs.bundle/Editor/%@.png", key];
+    NSString *path = [NSString stringWithFormat:@INSTALL_PREFIX"/Library/PreferenceBundles/AtriaPrefs.bundle/Editor/%@.png", key];
     cell.img.image = [[UIImage imageWithContentsOfFile:path] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] ?: [UIImage systemImageNamed:@"gear"];
 
     return cell;

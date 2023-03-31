@@ -33,7 +33,7 @@
         // Detect iOS version
         _firmware14 = [[[UIDevice currentDevice] systemVersion] compare:@"14.0" options:NSNumericSearch] != NSOrderedAscending;
         // ShyLabels compatibility
-        _shyLabelsInstalled = [[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/ShyLabels.dylib"];
+        _shyLabelsInstalled = [[NSFileManager defaultManager] fileExistsAtPath:@INSTALL_PREFIX"/Library/MobileSubstrate/DynamicLibraries/ShyLabels.dylib"];
         // NSUserDefaults to get what values the user set
         _preferences = [[NSUserDefaults alloc] initWithSuiteName:@"me.lau.AtriaPrefs"];
         _enabled = [_preferences objectForKey:@"enabled"] ? [[_preferences objectForKey:@"enabled"] boolValue] : YES;

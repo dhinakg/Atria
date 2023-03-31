@@ -14,7 +14,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 
     if(self) {
-        _icon = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/AtriaPrefs.bundle/full.png"]];
+        _icon = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:@INSTALL_PREFIX"/Library/PreferenceBundles/AtriaPrefs.bundle/full.png"]];
         [self addSubview:_icon];
         _icon.layer.masksToBounds = YES;
         _icon.layer.cornerCurve = kCACornerCurveContinuous;

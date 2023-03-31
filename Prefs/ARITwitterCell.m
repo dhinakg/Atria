@@ -62,7 +62,7 @@
 
 - (void)loadImage {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSString *path = [NSString stringWithFormat:@"/Library/PreferenceBundles/AtriaPrefs.bundle/ProfilePictures/%@.dat", _username];
+        NSString *path = [NSString stringWithFormat:@INSTALL_PREFIX"/Library/PreferenceBundles/AtriaPrefs.bundle/ProfilePictures/%@.dat", _username];
         UIImage *savedImage = [UIImage imageWithContentsOfFile:path];
         if(savedImage) {
             // Set saved image on main thread

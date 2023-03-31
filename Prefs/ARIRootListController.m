@@ -83,7 +83,7 @@
                     [prefs removePersistentDomainForName:@"me.lau.AtriaPrefs"];
 
                     NSTask *f = [[NSTask alloc] init];
-                    [f setLaunchPath:@"/usr/bin/killall"];
+                    [f setLaunchPath:@INSTALL_PREFIX"/usr/bin/killall"];
                     [f setArguments:[NSArray arrayWithObjects:@"SpringBoard", nil]];
                     [f launch];
                 }];
@@ -113,7 +113,7 @@
                     [prefs synchronize];
 
                     NSTask *f = [[NSTask alloc] init];
-                    [f setLaunchPath:@"/usr/bin/killall"];
+                    [f setLaunchPath:@INSTALL_PREFIX"/usr/bin/killall"];
                     [f setArguments:[NSArray arrayWithObjects:@"SpringBoard", nil]];
                     [f launch];
                 }];
@@ -252,7 +252,7 @@
                       style:UIAlertActionStyleDestructive
                     handler:^(UIAlertAction *action) {
                         NSTask *f = [[NSTask alloc] init];
-                        [f setLaunchPath:@"/usr/bin/killall"];
+                        [f setLaunchPath:@INSTALL_PREFIX"/usr/bin/killall"];
                         [f setArguments:[NSArray arrayWithObjects:@"SpringBoard", nil]];
                         [f launch];
                     }];

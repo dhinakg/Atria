@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>AtriaPrefs</string>
+	<string>AtriaPrefs.dylib</string>
 	<key>CFBundleIdentifier</key>
 	<string>me.lau.AtriaPrefs</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -45,7 +45,7 @@
     ]];
 
     // Tweak icon
-    _tweakIcon = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/AtriaPrefs.bundle/glyph.png"] ?: [UIImage systemImageNamed:@"gearshape"]];
+    _tweakIcon = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:@INSTALL_PREFIX"/Library/PreferenceBundles/AtriaPrefs.bundle/glyph.png"] ?: [UIImage systemImageNamed:@"gearshape"]];
     [self.view addSubview:_tweakIcon];
     _tweakIcon.layer.masksToBounds = YES;
     _tweakIcon.layer.cornerCurve = kCACornerCurveContinuous;
