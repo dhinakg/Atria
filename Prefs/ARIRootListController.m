@@ -54,7 +54,7 @@
                   style:UIAlertActionStyleDestructive
                 handler:^(UIAlertAction *action) {
                     NSTask *t = [[NSTask alloc] init];
-                    [t setLaunchPath:@"usr/bin/killall"];
+                    [t setLaunchPath:@INSTALL_PREFIX"/usr/bin/killall"];
                     [t setArguments:[NSArray arrayWithObjects:@"SpringBoard", nil]];
                     [t launch];
                 }];

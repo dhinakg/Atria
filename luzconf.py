@@ -8,17 +8,17 @@ meta = Meta(release=True, cc="clang++")
 
 # Define control metadata here
 control = Control(
-    name="Atria",
+    name="Atria (unofficial)",
     id="me.lau.atria",
-    version="1.3.3-4",
+    version="1.3.3-7",
     author="ren7995",
     maintainer="Dhinak G <dhinak@dhinak.net>",
-    description="A proper homescreen layout editor for iOS 13-15",
+    description="A proper homescreen layout editor for iOS 13-15\n Unofficial rootless build by Dhinak G",
     depends=[
         "firmware (>= 13.0)",
         "mobilesubstrate",
         "preferenceloader",
-         "ws.hbang.alderis (>= 1.1)"
+         "ws.hbang.alderis (>= 1.2.3)"
     ],
     conflicts=["com.irepo.boxy4", "me.kritanta.homepluspro"],
     architecture="iphoneos-arm64" if meta.release else "iphoneos-arm",
@@ -58,6 +58,7 @@ modules = [
         files=["Prefs/*.m"],
         c_flags=[install_prefix],
         frameworks=["UIKit", "QuartzCore"],
+        libraries=["colorpicker"],
         after_stage=lambda: copytree(Path("Prefs/layout/Library"), meta.root_dir / "Library", dirs_exist_ok=True),
         resources_dir=Path("Prefs/Resources"),
     ),
